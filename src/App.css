@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.top-pane {
+  background-color: grey;
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.pane {
+  height: 50vh;
+  display: flex;
+  background-color: grey;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.iframe {
+  height: 50vh;
+}
+
+.editor-container {
+  /* border: 1px solid white; */
+  flex-grow: 1;
+  flex-basis: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px;
+  background-color: grey;
+  /* margin: 5px; */
+  /* width: 33%; */
+}
+
+/* button */
+.editor-container.collapsed{
+  flex-grow: 0;
+}
+.expand-collapse-btn{
+  margin-left: 8px;
+  background:none;
+  border: none;
   color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+
+.editor-container.collapsed .CodeMirror-scroll {
+  position: absolute;
+  overflow: hidden !important
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.editor-title {
+  /* border: 1px solid white; */
+  background-color: black;
+  color: white;
+  display: flex;
+  padding: .3rem .3rem .3rem .7rem;
+  justify-content: space-between;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
+
+
+.CodeMirror {
+  height: 100% !important
+}
+
+.code-mirror-wrapper {
+  /* border: 1px solid white; */
+  flex-grow: 1;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
+}
+
+
+

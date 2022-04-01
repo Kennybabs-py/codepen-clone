@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Main from "./components/Main";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Main />
     </div>
   );
-}
-
+};
 export default App;
+
+//   getting our value
+//   const [storedValue, setStoredValue] = useState(() => {
+//     const jsonValue = localStorage.getItem(prefixedKey);
+//     return jsonValue ? JSON.parse(jsonValue) : initialValue;
+//   });
+
+//   //   setting our value
+//   const setValue = (value) => {
+//     try {
+//       const valueToStore =
+//         value instanceof Function ? value(storedValue) : value;
+//       setStoredValue(valueToStore);
+//       window.localStorage.setItem(prefixedKey, JSON.stringify(valueToStore));
+//     } catch (err) {
+//       console.error(err);
+//     }
+//   };
+//   return [storedValue, setValue];
