@@ -13,9 +13,15 @@ main {
   display: flex;
   background-color: grey;
 }
+.bottom-pane{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
  .iframe {
   height: 50%;
   border: 1px solid black;
+  border-radius: 20px;
 } 
 .editor-container {
   /* border: 1px solid white; */
@@ -44,7 +50,7 @@ main {
   overflow: hidden !important
 }
 .clear-btn-container{
-border: 1px solid black;
+/* border: 1px solid black; */
 display: flex;
 align-items: center;
 justify-content: center;
@@ -103,7 +109,7 @@ margin: 0 0 10px 0;
     border-top-right-radius: 0%;
   }
   .code-mirror-wrapper {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     flex-grow: 1;
     border-bottom-left-radius: 0%;
     border-bottom-right-radius: 0%;

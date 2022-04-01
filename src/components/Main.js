@@ -87,7 +87,7 @@ const Main = () => {
           title="code-output"
           sandbox="allow-scripts"
           frameBorder="0"
-          width="100%"
+          width="90%"
           // height="100%"
           className="iframe"
         />
