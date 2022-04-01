@@ -2,21 +2,21 @@ body {
   margin: 0;
 }
 
+main {
+  margin: 0;
+}
+
 .top-pane {
   background-color: grey;
   padding: 10px;
-}
-
-.pane {
   height: 50vh;
   display: flex;
   background-color: grey;
 }
-
-.iframe {
-  height: 50vh;
-}
-
+ .iframe {
+  height: 50%;
+  border: 1px solid black;
+} 
 .editor-container {
   /* border: 1px solid white; */
   flex-grow: 1;
@@ -28,7 +28,6 @@ body {
   /* margin: 5px; */
   /* width: 33%; */
 }
-
 /* button */
 .editor-container.collapsed{
   flex-grow: 0;
@@ -40,14 +39,17 @@ body {
   color: white;
   cursor: pointer;
 }
-
-
 .editor-container.collapsed .CodeMirror-scroll {
   position: absolute;
   overflow: hidden !important
-
 }
-
+.clear-btn-container{
+border: 1px solid black;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 0 10px 0;
+}
 .editor-title {
   /* border: 1px solid white; */
   background-color: black;
@@ -58,18 +60,55 @@ body {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
-
-
 .CodeMirror {
   height: 100% !important
 }
-
 .code-mirror-wrapper {
   /* border: 1px solid white; */
   flex-grow: 1;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .top-pane {
+    background-color: grey;
+    padding: 10px;
+    height: 50%;
+    display: flex;
+    background-color: grey;
+  }
+  .editor-container {
+    /* border: 1px solid white; */
+    flex-grow: 1;
+    display: flex;
+    padding: 5px;
+    background-color: grey;
+    margin: 5px;
+    width: 33%;
+    height: 90%;
+  }
+  .CodeMirror {
+    height: 100% !important
+  }
+  .editor-title {
+    /* border: 1px solid white; */
+    background-color: black;
+    color: white;
+    display: flex;
+    padding: .3rem .3rem .3rem .7rem;
+    justify-content: space-between;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+  }
+  .code-mirror-wrapper {
+    border: 1px solid white;
+    flex-grow: 1;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    overflow: hidden;
+  }
 }
 
 

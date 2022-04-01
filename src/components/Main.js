@@ -1,6 +1,19 @@
 import React, { useEffect, useState } from "react";
 import Editor from "./Editor";
 import useLocalStorage from "../hooks/useLocalStorage";
+import styled from "styled-components";
+
+const ClearButton = styled.button`
+  width: 20%;
+  height: 50px;
+  margin: 10px 0 10px 10px;
+  background-color: white;
+  border-color: black;
+  border-radius: 40px;
+  // font-size: 20%;
+  text-align: center;
+  cursor: pointer;
+`;
 
 const Main = () => {
   const [html, setHtml] = useLocalStorage("html", "");
@@ -21,6 +34,13 @@ const Main = () => {
 
     return () => clearTimeout(timeout);
   }, [html, css, js]);
+
+  const handleClear = () => {
+    setSrcDoc("");
+    setHtml("");
+    setCss("");
+    setJs("");
+  };
 
   // useEffect(() => {
   //   const timeout = setTimeout(() => {
@@ -57,6 +77,9 @@ const Main = () => {
           value={js}
           onChange={setJs}
         />
+      </div>
+      <div className="clear-btn-container">
+        <ClearButton onClick={handleClear}>Clear All</ClearButton>
       </div>
       <div className="bottom-pane">
         <iframe
